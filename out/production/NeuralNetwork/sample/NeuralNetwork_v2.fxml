@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1241.0" prefWidth="2138.0" style="-fx-background-color: #252526;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="btn_initialise" layoutX="1055.0" layoutY="64.0" mnemonicParsing="false" onAction="#initialise" style="-fx-text-fill: white; -fx-background-color: #323233; -fx-border-color: white;" text="Initialise">
+         </Button>
+      <Button fx:id="btn_start" layoutX="989.0" layoutY="155.0" mnemonicParsing="false" onAction="#startBackProp" style="-fx-text-fill: white; -fx-background-color: #323233; -fx-border-color: white;" text="Start backpropagation">
+         </Button>
+      <Label layoutX="1034.0" layoutY="925.0" style="-fx-text-fill: white;" text="---- Targets ----" />
+      <Label fx:id="Target_1" layoutX="670.0" layoutY="925.0" style="-fx-text-fill: white;" text="Target_1" />
+      <Label fx:id="Target_2" layoutX="1443.0" layoutY="925.0" style="-fx-text-fill: white;" text="Target_2" />
+      <Label layoutX="649.0" layoutY="1022.0" text="Learning rate" textFill="#a9afa2" />
+      <Label layoutX="1413.0" layoutY="1022.0" text="Error threshold" textFill="#a9afa2" />
+      <TextField id="txtFieldLearningRate" fx:id="Learning_rate" layoutX="579.0" layoutY="1132.0" style="-fx-background-color: #323233; -fx-text-fill: white" />
+      <TextField id="txtFieldErrorThreshold" fx:id="error_threshold" layoutX="1352.0" layoutY="1132.0" style="-fx-background-color: #323233; -fx-text-fill: white" />
+      <TextField fx:id="Input_1" alignment="CENTER" layoutX="253.0" layoutY="294.0" style="-fx-background-color: #EC2F2F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="Hidden_3" alignment="CENTER" layoutX="1173.0" layoutY="581.0" style="-fx-background-color: #EC2F2F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="Hidden_4" alignment="CENTER" layoutX="1601.0" layoutY="581.0" style="-fx-background-color: #EC2F2F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="Input_3" alignment="CENTER" layoutX="1619.0" layoutY="298.0" style="-fx-background-color: #EC2F2F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="Input_2" alignment="CENTER" layoutX="976.0" layoutY="294.0" style="-fx-background-color: #EC2F2F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="Output_2" alignment="CENTER" layoutX="1350.0" layoutY="833.0" style="-fx-background-color: #EC2F2F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="Output_1" alignment="CENTER" layoutX="578.0" layoutY="833.0" style="-fx-background-color: #EC2F2F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="Hidden_2" alignment="CENTER" layoutX="791.0" layoutY="581.0" style="-fx-background-color: #EC2F2F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="Hidden_1" alignment="CENTER" layoutX="320.0" layoutY="581.0" style="-fx-background-color: #EC2F2F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="IH11" layoutX="107.0" layoutY="408.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="HO12" layoutX="491.0" layoutY="711.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="HO11" layoutX="320.0" layoutY="711.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="HO41" layoutX="1612.0" layoutY="711.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="HO42" layoutX="1783.0" layoutY="711.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="HO31" layoutX="1177.0" layoutY="711.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="HO32" layoutX="1348.0" layoutY="711.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="HO21" layoutX="784.0" layoutY="711.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="HO22" layoutX="955.0" layoutY="711.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="IH12" layoutX="245.0" layoutY="409.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="IH13" layoutX="385.0" layoutY="408.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="IH14" layoutX="526.0" layoutY="408.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="IH34" layoutX="1907.0" layoutY="408.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="IH33" layoutX="1766.0" layoutY="408.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="IH32" layoutX="1626.0" layoutY="409.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="IH31" layoutX="1488.0" layoutY="408.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="IH24" layoutX="1264.0" layoutY="409.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="IH23" layoutX="1123.0" layoutY="409.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="IH22" layoutX="983.0" layoutY="410.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+      <TextField fx:id="IH21" layoutX="845.0" layoutY="409.0" prefHeight="47.0" prefWidth="106.0" style="-fx-background-color: #52548F; -fx-border-color: blue; -fx-text-fill: white" />
+   </children>
+</Pane>
