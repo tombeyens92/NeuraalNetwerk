@@ -1,9 +1,13 @@
 package sample;
 
+import java.util.Random;
+
 /**
  * Created by tombe on 23/11/2015.
  */
 public class NeuralNetwork {
+
+    private Random random;
 
     private int _numberOfInputCells;
     private int _numberOfHiddenCells;
@@ -117,8 +121,9 @@ public class NeuralNetwork {
 
     public void initializeTargets(){
         targets = new double[_numberOfOutputCells];
-        targets[0] = 0.08603;
-        targets[1] = 0.46069;
+        random = new Random();
+        targets[0] = random.nextDouble();
+        targets[1] = random.nextDouble();
     }
 
     public int get_numberOfInputCells() {
@@ -238,14 +243,18 @@ public class NeuralNetwork {
             outputGradients[i] = derivative * (targets[i] - outputNeuron[i]);
         }
         hiddenGradients = new double[_numberOfHiddenCells];
+
+        double sum = 0;
+
         for (int i = 0; i < newHiddens.length; i++){
             derivative = (1-newHiddens[i]) * (1+newHiddens[i]);
 
-            double sum = 0;
+
             for (int j = 0; j < outputGradients.length; j++){
                 sum += outputGradients[j] * hoAxon[i][j];
             }
             hiddenGradients[i] = derivative * sum;
+
         }
 
         //Calculate delta difference between input and hidden weights

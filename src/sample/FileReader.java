@@ -21,6 +21,7 @@ public class FileReader {
         } catch (IOException e){
 
         }
+        System.out.println(splitted.toString());
         return splitted;
     }
 }

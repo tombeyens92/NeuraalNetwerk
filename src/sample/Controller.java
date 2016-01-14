@@ -117,10 +117,12 @@ public class Controller implements Initializable {
 
 
     public void initialise(ActionEvent actionEvent) {
-
+        //th.interrupt();
         fileReader = new FileReader();
         String[] list = fileReader.readFile(".\\Files\\A.txt");
-
+        for (String s : list){
+            System.out.println(s);
+        }
         String[] normalList = new String[]{"1", "-2","3"};
 
         neuralNetwork.initializeInputNeuron(normalList.length, normalList);
